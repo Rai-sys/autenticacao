@@ -1,6 +1,9 @@
 const express = require('express');
-const aluno = require('../controllers/aluno.controller')
+const alunoController = require('../controllers/aluno.controller')
 
 const router = express.Router()
 
-// perfil
+// rota de cadastro
+router.post('/cadastrar', alunoController.cadastrar);
+
+module.exports = router
